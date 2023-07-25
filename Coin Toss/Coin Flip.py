@@ -9,8 +9,8 @@ import pygame
 import pygame.locals
 import dumbmenu
 from random import randrange
-import moviepy.editor
 import moviepy
+import moviepy.editor
 import moviepy.video.fx.all as vfx
 
 def rand50():
@@ -27,8 +27,8 @@ class Quarter(pygame.sprite.Sprite):
         self.image = self.quarter_image_head
         self.rect = self.image.get_rect()
         self.heads = 1
-        self.countHeads = 0
-        self.countTails = 0
+        self.count_heads = 0
+        self.count_tails = 0
     
     def update(self):
         if self.heads == 1:
@@ -41,10 +41,10 @@ class Quarter(pygame.sprite.Sprite):
         self.heads = rand75()
         
         if self.heads == 1:
-            self.countHeads+=1
+            self.count_heads+=1
         else:
-            self.countTails+=1
-        print(f"Heads flipped: {self.countHeads} and Tails flipped: {self.countTails} Total flips: {self.countTails + self.countHeads}")
+            self.count_tails+=1
+        print(f"Heads flipped: {self.count_heads} and Tails flipped: {self.count_tails} Total flips: {self.count_tails + self.count_heads}")
     
     def move(self, x, y):
         self.rect = pygame.Rect(x, y, self.rect[2], self.rect[3])
@@ -57,8 +57,8 @@ class Copper_Penny(pygame.sprite.Sprite):
         self.image = self.CP_image_head
         self.rect = self.image.get_rect()
         self.heads = 1
-        self.countHeads = 0
-        self.countTails = 0
+        self.count_heads = 0
+        self.count_tails = 0
     
     def update(self):
         if self.heads == 1:
@@ -78,10 +78,10 @@ class Copper_Penny(pygame.sprite.Sprite):
         clip = clip.resize(0.4)
         clip.preview()
         if self.heads == 1:
-            self.countHeads+=1
+            self.count_heads+=1
         else:
-            self.countTails+=1
-        print(f"Heads flipped: {self.countHeads} and Tails flipped: {self.countTails} Total flips: {self.countTails + self.countHeads}")
+            self.count_tails+=1
+        print(f"Heads flipped: {self.count_heads} and Tails flipped: {self.count_tails} Total flips: {self.count_tails + self.count_heads}")
     
     
     def move(self, x, y):
