@@ -41,8 +41,8 @@ def calculate_runs():
         heads-=1
     #print out our final values
     #Note: This is done in an older version of Python. Newer Versions of Python you can #write a print statement as: print(f”Variable: {variable}"), not needing the .format()
-    print(f"Cumulative Probability Cheating: {Cumulative_cheat*100}%")
-    print(f"Cumulative Probability Not Cheating: {Cumulative_not_cheat*100}%")
+    print(f"Cumulative Probability Cheating: {cumulative_cheat*100}%")
+    print(f"Cumulative Probability Not Cheating: {cumulative_not_cheat*100}%")
     print(f"If the player tosses the coin: {num_runs} times and flips: {heads+1} or more heads then they are cheating")
 
 
